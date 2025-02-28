@@ -1,0 +1,15 @@
+{% extends 'header_footer.html' %}
+{% block content %}
+<h2>Register</h2>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+<form method="POST">
+    <input type="text" name="username" placeholder="Username" required><br>
+    <input type="email" name="email" placeholder="Email" required><br>
+    <input type="password" name="password" placeholder="Password" required><br>
+    <select name="role">
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+    </select><br>
+    <button type="submit">Register</button>
+</form>
+{% endblock %}

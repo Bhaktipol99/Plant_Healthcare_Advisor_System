@@ -1,0 +1,23 @@
+{% extends 'header_footer.html' %}
+
+{% block content %}
+<h1>Edit Profile</h1>
+
+<form method="POST" action="{{ url_for('edit_profile') }}">
+    <!-- CSRF Token -->
+    {{ form.hidden_tag() }} 
+
+    <label for="username">Username:</label>
+    {{ form.username(class='form-control') }}<br><br>
+
+    <label for="email">Email:</label>
+    {{ form.email(class='form-control') }}<br><br>
+
+    <label for="role">Role:</label>
+    {{ form.role(class='form-control') }}<br><br>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
+
+<a href="{{ url_for('profile') }}">Back to Profile</a>
+{% endblock %}

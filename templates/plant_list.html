@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant List</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid black; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        a { text-decoration: none; color: blue; margin-right: 10px; }
+    </style>
+</head>
+<body>
+
+    <h2>Plant List</h2>
+
+    {% if plants %}
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+            {% for plant in plants %}
+            <tr>
+                <td>{{ plant.name }}</td>
+                <td>{{ plant.description }}</td>
+                <td>
+                    <a href="{{ url_for('view_plant', plant_id=plant.id) }}">View</a> |
+                    <a href="{{ url_for('edit_plant', plant_id=plant.id) }}">Edit</a> |
+                    <a href="{{ url_for('delete_plant', plant_id=plant.id) }}" onclick="return confirm('Are you sure?')">Delete</a> |                 
+                      <a href="{{ url_for('saved_plants') }}">Save</a> 
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No plants available.</p>
+    {% endif %}
+
+</body>
+</html>

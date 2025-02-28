@@ -1,0 +1,102 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #007bff;
+}
+
+/* Plant List Section */
+.plant-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plant-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+/* Plant Card Styles */
+.plant-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    width: 100%;
+}
+
+.plant-card:hover {
+    transform: translateY(-5px);
+}
+
+.plant-card-header {
+    position: relative;
+    padding: 20px;
+    background: #28a745;
+    color: #fff;
+    text-align: center;
+}
+
+.plant-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.plant-card-header h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Plant Card Body */
+.plant-card-body {
+    padding: 20px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.plant-card-footer {
+    padding: 10px 20px;
+    text-align: center;
+    background: #f8f9fa;
+    border-top: 1px solid #e2e2e2;
+}
+
+.plant-details-btn {
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.plant-details-btn:hover {
+    background-color: #0056b3;
+}

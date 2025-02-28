@@ -1,0 +1,38 @@
+{% extends 'header_footer.html' %}
+
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+<div class="container-fluid p-0">
+    <div class="hero-section">
+        <div class="hero-text text-center">
+            <h1 class="display-4 text-success font-weight-bold">🌿 Welcome to the Plant Healthcare Advisor System 🌿</h1>
+            <p class="lead text-white mt-3">
+                Your trusted companion in ensuring the health and well-being of your plants.  
+                Get expert advice, track plant growth, and discover tips for a greener future! 🌱🌎
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+<nav>
+    <div class="nav-links">
+        <a href="home.html"><b>Home</b></a>
+        <a href="dashboard.html"><b>Dashboard</b></a>
+        <a href="profile.html"><b>Profile</b></a>
+
+        <!-- Dropdown -->
+        <div class="dropdown">
+            <a href="#" id="plants-dropdown"><b>Plants ▼</b></a>
+            <div class="dropdown-content">
+                <a href="add_plant">Add Plant</a>
+                <a href="saved">Saved Plants</a>
+                <a href="#">Plant List</a>
+            </div>
+        </div>
+
+        <a href="logout.html"><b>Logout</b></a>
+    </div>
+</nav>
+

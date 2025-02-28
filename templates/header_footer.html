@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plant Health Care</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header_footer.css') }}">
+</head>
+<body>
+<nav>
+    <a href="{{ url_for('home') }}">Home</a>
+    {% if current_user.is_authenticated %}
+        <a href="{{ url_for('user_dashboard') }}">Dashboard</a>
+        <a href="{{ url_for('profile') }}">Profile</a>
+
+        <!-- Dropdown for Plants -->
+        <div class="dropdown">
+            <a href="#" class="dropbtn">Plants ▼</a>
+            <div class="dropdown-content">
+                <a href="{{ url_for('add_plant') }}">Add Plant</a>
+                <a href="{{ url_for('saved_plants') }}">Saved Plants</a>
+                <a href="{{ url_for('plant_list') }}">Plant List</a>
+            </div>
+        </div>
+
+        <a href="{{ url_for('logout') }}">Logout</a>
+        {% if current_user.role == "admin" %}
+            <a href="{{ url_for('manage_users') }}">Manage Users</a>
+        {% endif %}
+    {% else %}
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('register') }}">Register</a>
+    {% endif %}
+</nav>
+<hr>
+{% block content %}{% endblock %}
+
+<footer>
+    <p>&copy; 2025 Plant Health Care. All rights reserved.</p>
+</footer>
+</body>
+</html>

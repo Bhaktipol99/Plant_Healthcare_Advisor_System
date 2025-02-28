@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/saved_plants.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Plants</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid black; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        a { text-decoration: none; color: blue; margin-right: 10px; }
+    </style>
+</head>
+<body>
+
+    <h2>Saved Plants</h2>
+
+    {% if saved_plants %}
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+            {% for plant in saved_plants %}
+            <tr>
+                <td>{{ plant.name }}</td>
+                <td>{{ plant.description }}</td>
+                <td>
+                    <a href="{{ url_for('view_plant', plant_id=plant.id) }}">View</a> |
+                    <a href="{{ url_for('remove_saved_plant', plant_id=plant.id) }}" onclick="return confirm('Remove from saved plants?')">Remove</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No saved plants available.</p>
+    {% endif %}
+
+    <br>
+    <a href="{{ url_for('plant_list') }}">Back to Dashboard</a>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% extends 'header_footer.html' %}
+
+{% block content %}
+    <h1>Plant Details</h1>
+    
+    {% if plant %}
+        <p><strong>ID:</strong> {{ plant.id }}</p>
+        <p><strong>Name:</strong> {{ plant.name }}</p>
+        <p><strong>Description:</strong> {{ plant.description }}</p>
+    {% else %}
+        <p>Plant not found.</p>
+    {% endif %}
+
+    <a href="{{ url_for('plant_list') }}">Back to Plant List</a>
+{% endblock %}

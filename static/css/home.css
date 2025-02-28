@@ -1,0 +1,115 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* More modern font */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+/* Hero Section Styles */
+.hero-section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    background-image: url('../images/plant.jpg'); /* Path to your image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1; /* Ensure text is above the overlay */
+    color: white; /* Text color */
+    max-width: 800px; /* Limit text width */
+    padding: 20px;
+    animation: slideUp 1.5s ease-in-out; /* Slide-up animation */
+}
+
+/* Header Styles */
+.display-4 {
+    font-size: 3rem; /* Larger font size */
+    font-weight: 700; /* Bold font weight */
+    color: #28a745; /* Green color */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Text shadow for better contrast */
+    animation: fadeIn 2.5s ease-in-out; /* Fade-in animation */
+}
+
+.lead {
+    font-size: 1.5rem; /* Slightly larger font size */
+    color: #fff; /* White color for better contrast */
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better contrast */
+    animation: fadeIn 3s ease-in-out; /* Fade-in animation */
+}
+
+/* Button Styles (if you add buttons later) */
+.btn-primary {
+    background-color: #28a745;
+    border-color: #28a745;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 30px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.2rem; /* Adjusted font size for smaller screens */
+    }
+
+    .lead {
+        font-size: 1.2rem; /* Adjusted font size for smaller screens */
+    }
+}

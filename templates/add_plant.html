@@ -1,0 +1,19 @@
+{% extends 'header_footer.html' %}
+
+{% block content %}
+    <h1>Add a New Plant</h1>
+
+    <form method="POST" action="{{ url_for('add_plant') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/add_plant.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/header_footer.css') }}">
+        {{ form.hidden_tag() }}
+        <label>Plant Name:</label>
+        {{ form.name }}
+        <label>Description:</label>
+        <textarea name="description"></textarea>
+        <button type="submit">Add Plant</button>
+    </form>
+    
+
+    <a href="{{ url_for('plant_list') }}" style="display: block; margin-top: 10px;">View Plant List</a>
+{% endblock %}

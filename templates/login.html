@@ -1,0 +1,17 @@
+    {% extends 'header_footer.html' %}
+    {% block content %}
+    <h2>Login</h2>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <form method="POST">
+        {{ form.hidden_tag() }} 
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+
+        <button type="submit">Login</button>
+    </form>
+
+    {% endblock %}

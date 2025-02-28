@@ -1,0 +1,88 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Heading styling */
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table header and cell styling */
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Table header background */
+th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* Table rows */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Action links styling */
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Link hover effect */
+a:hover {
+    color: #0056b3;
+}
+
+/* No saved plants message */
+p {
+    font-size: 18px;
+    text-align: center;
+    color: #555;
+}
+
+/* Back button styling */
+br {
+    margin-bottom: 20px;
+}
+
+a.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Back button hover effect */
+a.back-btn:hover {
+    background-color: #0056b3;
+}

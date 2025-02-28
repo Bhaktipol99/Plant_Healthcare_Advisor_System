@@ -1,0 +1,216 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f2f3f4, #f8f9fa); /* Soft gradient background */
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 60px; /* Add padding to the bottom to prevent footer overlap */
+}
+
+/* Navigation Bar */
+nav {
+    background: rgba(150, 175, 216, 0.8); /* Glass effect */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 0.8rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-radius: 0 0 15px 15px;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    gap: 1rem; /* Space between menu items */
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Navigation Links */
+nav a {
+    padding: 10px 15px;
+    font-weight: 600;
+    color: #222;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    text-decoration: none;
+}
+
+/* Underline Animation */
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #28a745;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Button */
+.dropdown-btn {
+    padding: 10px 15px;
+    font-weight: 600;
+    color: #222;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    background: rgba(40, 167, 69, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    min-width: 150px;
+    padding: 8px 0;
+    z-index: 1000;
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    transition: background 0.3s;
+}
+
+/* Hover Effect */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show Dropdown When Parent is Clicked */
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+/* Footer Styles */
+footer {
+    background: rgba(128, 155, 219, 0.8); /* Glass effect */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1rem;
+    color: #222;
+    border-radius: 15px 15px 0 0;
+    position: fixed;
+    bottom: 0; /* Fixes the footer to the bottom */
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Ensures footer is above other elements */
+}
+
+/* Footer Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-links a {
+    color: #222;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Underline Animation */
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #28a745;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+/* Footer Social Icons */
+.footer-social {
+    margin-top: 10px;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin: 0 8px;
+    color: #333;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-social a:hover {
+    color: #28a745;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background: transparent;
+        padding: 0;
+    }
+
+    .dropdown-content a {
+        padding: 8px 15px;
+    }
+}

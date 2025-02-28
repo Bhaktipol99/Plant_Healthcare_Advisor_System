@@ -1,0 +1,93 @@
+/* General Form Styling */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+    text-align: left;
+}
+
+/* Input Fields */
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Focus Effect */
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+    outline: none;
+}
+
+/* Textarea */
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+/* Submit Button */
+button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    margin-top: 10px;
+}
+
+/* Hover & Active Effects for Button */
+button:hover {
+    background: #218838;
+    transform: scale(1.02);
+}
+
+button:active {
+    background: #1e7e34;
+    transform: scale(0.98);
+}
+
+/* View Plant List Link */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #28a745;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Hover & Active Effects for Links */
+a:hover {
+    color: #1e7e34;
+    transform: scale(1.05);
+}
+
+a:active {
+    color: #155d27;
+    transform: scale(0.98);
+}
