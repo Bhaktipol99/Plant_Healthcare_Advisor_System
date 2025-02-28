@@ -11,12 +11,6 @@ The **Plant Healthcare Advisor System** is a web-based application developed usi
 - **Disease Diagnosis**: Users can input plant symptoms or upload images to diagnose plant diseases.
 - **Treatment Suggestions**: Based on the diagnosis, users are provided with treatment options for the affected plant.
 
-### Admin Features:
-- **Admin Login**: Admins have a special login to access the admin panel.
-- **Admin CRUD Operations**: Admins can perform **Create**, **Read**, **Update**, and **Delete** operations on plant records, user profiles, and disease data.
-- **Manage Users**: Admins can manage users, including activating or deactivating user accounts.
-- **Manage Plant Data**: Admins can add, update, or remove plant records and their associated diseases and treatments.
-- **View User Diagnoses**: Admins can access and review diagnoses performed by users.
 
 ## Technologies Used
 - **Frontend**: HTML, CSS (for responsive web design)
